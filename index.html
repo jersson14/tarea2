@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notas Rápidas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-content">
+      <img src="icons/icon-192.png" alt="Icono Notas" class="logo">
+      <h1>📝 Notas Rápidas</h1>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <section class="note-box">
+      <textarea id="nota" placeholder="Escribe aquí tu nota..."></textarea>
+      <button id="guardarBtn">💾 Guardar Nota</button>
+      <p id="estado" class="estado-guardado"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
