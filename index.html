@@ -4,29 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Notas Rápidas</title>
-  <!-- CORREGIDO: Sin tarea2/ -->
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon-192.png" />
 </head>
 <body>
-  <header class="app-header">
-    <div class="header-content">
-      <!-- CORREGIDO: Sin tarea2/ -->
-      <img src="icons/icon-192.png" alt="Icono Notas" class="logo">
-      <h1>📝 Notas Rápidas</h1>
-    </div>
-  </header>
-  
-  <main class="app-container">
+  <!-- El contenedor principal incluye tanto header como contenido -->
+  <div class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <img src="icons/icon-192.png" alt="Icono Notas" class="logo">
+        <h1>📝 Notas Rápidas</h1>
+      </div>
+    </header>
+    
     <section class="note-box">
       <textarea id="nota" placeholder="Escribe aquí tu nota..."></textarea>
       <button id="guardarBtn">💾 Guardar Nota</button>
       <p id="estado" class="estado-guardado"></p>
     </section>
-  </main>
+  </div>
   
-  <!-- CORREGIDO: Sin tarea2/ -->
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
